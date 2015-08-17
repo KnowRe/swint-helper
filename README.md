@@ -1,6 +1,8 @@
 # swint-helper
 Helper functions and classes for Swint
 
+**Warning: This is not final draft yet, so do not use this until official version launched**
+
 ## Installation
 ```sh
 $ npm install --save swint-helper
