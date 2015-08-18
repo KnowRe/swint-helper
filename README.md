@@ -114,3 +114,40 @@ var swintHelper = require('swint-helper'),
 var o = swintHelper.validate(r, t);
 // o ==> [ false, [ 'c', 'd', 0 ] ]
 ```
+
+### `.print(level, msg)`
+Prints messages and associated levels
+
+#### Levels
+0: RAW
+1: DEBUG(default)
+2: INFO
+3: WARNING
+4: ERROR
+
+#### Examples
+
+```javascript
+print(0, 'Raw message');
+// ==> Raw message
+print(1, 'Debug message');
+// ==> DEBUG/2015-05-07T13:55:35.612Z)
+//		Debug message
+print(2, 'Info message');
+// ==> INFO /2015-05-07T13:55:35.612Z)
+//		Info message
+print(3, 'Warning message');
+// ==> WARN /2015-05-07T13:55:35.612Z)
+//		Warning message
+print(4, 'Error message');
+// ==> ERROR/2015-05-07T13:55:35.612Z)
+//		Error message
+
+// Setting the printLevel sets a minimum requirement for the levels
+global.swintVar.printLevel = 3;		
+print(0, 'Raw message');		// Would not print
+print(1, 'Debug message');		// Would not print
+print(2, 'Info message');		// Would not print
+print(3, 'Warning message');	// Would print
+print(4, 'Error message');		// Would print
+```

@@ -3,7 +3,10 @@
 		"indent": [
 			2,
 			"tab",
-			{"SwitchCase": 1}
+			{
+				"SwitchCase": 1,
+				"VariableDeclarator": 1
+			}
 		],
 		"quotes": [
 			2,

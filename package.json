@@ -1,36 +1,36 @@
 {
-	"name": "swint-helper",
-	"version": "0.1.1",
-	"description": "Helper functions and classes for Swint",
-	"main": "lib/index.js",
-	"scripts": {
-		"test": "eslint lib && mocha"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/KnowRe/swint-helper.git"
-	},
-	"keywords": [
-		"swint",
-		"helper",
-		"defaultization",
-		"print",
-		"walk",
-		"validation",
-		"concatenation"
-	],
-	"author": "Kurt Cho <kivoloid@gmail.com>",
-	"contributors": [
-	],
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/KnowRe/swint-helper/issues"
-	},
-	"homepage": "https://github.com/KnowRe/swint-helper",
-	"dependencies": {
-	},
-	"devDependencies": {
-		"mocha": "*",
-		"eslint": "*"
-	}
+  "name": "swint-helper",
+  "version": "0.1.1",
+  "description": "Helper functions and classes for Swint",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "eslint lib && mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KnowRe/swint-helper.git"
+  },
+  "keywords": [
+    "swint",
+    "helper",
+    "defaultization",
+    "print",
+    "walk",
+    "validation",
+    "concatenation"
+  ],
+  "author": "Kurt Cho <kivoloid@gmail.com>",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KnowRe/swint-helper/issues"
+  },
+  "homepage": "https://github.com/KnowRe/swint-helper",
+  "dependencies": {
+    "sprintf": "^0.1.5"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "eslint": "*"
+  }
 }
