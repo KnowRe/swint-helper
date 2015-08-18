@@ -53,7 +53,7 @@ Recursively looks through an object to see if its values match the rules
 * `[[0]]` : Has to be an Array of Arrays of Numbers
 * `{ a: 0 }` : Has to be an Object with key of a: Number
 
-#### Example
+#### Examples
 ```javascript
 var r = {
 		a: 0,
@@ -111,7 +111,6 @@ Prints messages and associated levels
 * 4 : ERROR
 
 #### Examples
-
 ```javascript
 print(0, 'Raw message');
 // ==> Raw message
@@ -145,16 +144,28 @@ The whitelist precedes blacklist.
 * `dir` : `String`, default: `path.dirname(require.main.filename)`
 * `ext` : `String`, default: `'*'`
 * `whitelist` : `function(fullPath)`, default: pass
-* `blacklist` : `function(fullPath)`, default: extension, starting with '_'
+* `blacklist` : `function(fullPath)`, default: extension, starting with `_`
 * `baseOrderRule` : `Boolean`, default: `true`, whether using baseOrderRule
 * `orderRule` : `function(a, b)`, default: ...
 * `head` : `String`, default: `'Intro'`
 * `tail` : `String`, default: `'Outro'`
 
-#### Examples
+#### Example
 ```javascript
 var list = walk({
 		dir: path.join(__dirname, 'myDir'),
 		ext: 'js'
 	});
+```
+---
+### `.concat(fileList)`
+Concatenating file contents on the fileList and returns string
+
+#### Example
+```javascript
+var str = concat([
+		path.join(__dirname, 'aaa.txt'),
+		path.join(__dirname, 'bbb.txt'),
+		path.join(__dirname, 'ccc.txt')
+	]);
 ```
