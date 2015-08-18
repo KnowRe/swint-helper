@@ -42,29 +42,17 @@ swintHelper.defaultize(def, tgt);
 Recursively looks through an object to see if its values match the rules
 
 #### Rules
-```javascript
-undefined -> Can be any type 
-
-0 -> Has to be a Number
-
-'' -> Has to be a String
-
-'aaa\bbbb\bccc' -> Has to be enum('aaa', 'bbb', 'ccc')
-
-new Date(0) -> Has to be a Date
-
-{} -> Has to be an object
-
-[0] -> Has to be an Array of Numbers
-
-[''] -> Has to be an Array of Strings
-
-[new Date(0)] -> Has to be an Array of Dates
-
-[[0]] -> Has to be an Array of Arrays of Numbers
-
-{ a: 0 } -> Has to be an Object with key of a: Number
-```
+* `undefined` : Can be any type 
+* `0` : Has to be a Number
+* `''` : Has to be a String
+* `'aaa\bbbb\bccc'` : Has to be enum('aaa', 'bbb', 'ccc')
+* `new Date(0)` : Has to be a Date
+* `{}` : Has to be an object
+* `[0]` : Has to be an Array of Numbers
+* `['']` : Has to be an Array of Strings
+* `[new Date(0)]` : Has to be an Array of Dates
+* `[[0]]` : Has to be an Array of Arrays of Numbers
+* `{ a: 0 }` : Has to be an Object with key of a: Number
 
 #### Example
 ```javascript
@@ -119,11 +107,11 @@ var o = swintHelper.validate(r, t);
 Prints messages and associated levels
 
 #### Levels
-0: RAW
-1: DEBUG(default)
-2: INFO
-3: WARNING
-4: ERROR
+* 0 : RAW
+* 1 : DEBUG(default)
+* 2 : INFO
+* 3 : WARNING
+* 4 : ERROR
 
 #### Examples
 
