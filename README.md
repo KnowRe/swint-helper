@@ -19,8 +19,7 @@ If `tgtVal` doesn't have enough values at the Array -> It is filed from `defVal`
 
 #### Examples
 ```javascript
-var swintHelper = require('swint-helper'),
-	def,
+var def,
 	tgt;
 
 def = {
@@ -34,10 +33,10 @@ tgt = {
 	c: [4]
 };
 
-swintHelper.defaultize(def, tgt);
+defaultize(def, tgt);
 // tgt ==>  { a: 1, b: 'bbb', c: [4, 2, 3] }
 ```
-
+---
 ### `.validate(ruleVal, tgtVal)`
 Recursively looks through an object to see if its values match the rules
 
@@ -56,8 +55,7 @@ Recursively looks through an object to see if its values match the rules
 
 #### Example
 ```javascript
-var swintHelper = require('swint-helper'),
-	r = {
+var r = {
 		a: 0,
 		b: '',
 		c: {
@@ -74,15 +72,14 @@ var swintHelper = require('swint-helper'),
 		}
 	};
 
-var o = swintHelper.validate(r, t);
+var o = validate(r, t);
 // o ==> [ true, [] ]
 ```
 
 If the target didn't match the target, it will return false and a path to the failing entry:
 
 ```javascript
-var swintHelper = require('swint-helper'),
-	r = {
+var r = {
 		a: 0,
 		b: '',
 		c: {
@@ -99,11 +96,11 @@ var swintHelper = require('swint-helper'),
 		}
 	};
  
-var o = swintHelper.validate(r, t);
+var o = validate(r, t);
 // o ==> [ false, [ 'c', 'd', 0 ] ]
 ```
-
-### `.print(level, msg)`
+---
+### `.print([level], msg1, [msg2, ...])`
 Prints messages and associated levels
 
 #### Levels
@@ -138,4 +135,26 @@ print(1, 'Debug message');		// Would not print
 print(2, 'Info message');		// Would not print
 print(3, 'Warning message');	// Would print
 print(4, 'Error message');		// Would print
+```
+---
+### `.walk(options)`
+Walks directory and returns the list of file. The dir should be a full path.
+
+#### Options
+The whitelist precedes blacklist.
+* `dir` : `String`, default: `path.dirname(require.main.filename)`
+* `ext` : `String`, default: `'*'`
+* `whitelist` : `function(fullPath)`, default: pass
+* `blacklist` : `function(fullPath)`, default: extension, starting with '_'
+* `baseOrderRule` : `Boolean`, default: `true`, whether using baseOrderRule
+* `orderRule` : `function(a, b)`, default: ...
+* `head` : `String`, default: `'Intro'`
+* `tail` : `String`, default: `'Outro'`
+
+#### Examples
+```javascript
+var list = walk({
+		dir: path.join(__dirname, 'myDir'),
+		ext: 'js'
+	});
 ```
