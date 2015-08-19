@@ -1,5 +1,6 @@
 var assert = require("assert"),
-	swintHelper = require('../lib');
+	swintHelper = require('../lib'),
+	defaultize = swintHelper.defaultize;
 
 describe('defaultize', function() {
 	it('Filling the keys', function() {
@@ -11,7 +12,7 @@ describe('defaultize', function() {
 			tgt = {
 				b: 'bbb'
 			},
-			defaultized = swintHelper.defaultize(def, tgt);
+			defaultized = defaultize(def, tgt);
 
 		assert.deepEqual(tgt, { a: 1, b: 'bbb', c: true });
 	});
@@ -23,7 +24,7 @@ describe('defaultize', function() {
 			tgt = {
 				a: [0, 1]
 			},
-			defaultized = swintHelper.defaultize(def, tgt);
+			defaultized = defaultize(def, tgt);
 
 		assert.deepEqual(tgt, { a: [0, 1, 3, 4] });
 	});
@@ -47,7 +48,7 @@ describe('defaultize', function() {
 				},
 				g: 2
 			},
-			defaultized = swintHelper.defaultize(def, tgt);
+			defaultized = defaultize(def, tgt);
 
 		assert.deepEqual(tgt, {
 			a: {
@@ -73,9 +74,19 @@ describe('defaultize', function() {
 				b: 'bbb',
 				c: [4]
 			},
-			defaultized = swintHelper.defaultize(def, tgt);
+			defaultized = defaultize(def, tgt);
 
 		assert.deepEqual(tgt, { a: 1, b: 'bbb', c: [4, 2, 3] });
 		assert.deepEqual(defaultized, { a: 1, b: 'bbb', c: [4, 2, 3] });
+	});
+
+	it('Undefined case', function() {
+		var def = {
+				a: 1
+			},
+			tgt,
+			defaultized = defaultize(def, tgt);
+
+		assert.deepEqual(defaultized, def);
 	});
 });
