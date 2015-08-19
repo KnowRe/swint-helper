@@ -5,26 +5,19 @@ var os = require('os'),
 	swintHelper = require('../lib');
 
 describe('concat', function() {
-	var dir = path.join(os.tmpdir(), String(Math.floor(Math.random() * 10000000000000))),
-		numbers = [];
-
-	for(var i = 0; i < 10; i++) {
-		numbers.push(String(Math.floor(Math.random() * 10000000000000)));
-	}
-	
-	before(function() {
-		fs.mkdirSync(dir);
-		for(var i = 0; i < 10; i++) {
-			fs.writeFileSync(path.join(dir, numbers[i]), numbers[i] + '\n');
-		}
-	});
+	var dir = path.join(__dirname, '../test_case');
 
 	it('Simple concatenation', function() {
-		var files = numbers.map(function(n) {
-				return path.join(dir, n);
+		var files = [
+				'Intro.js',
+				'file1.js',
+				'file4.js',
+				'Outro.js'
+			].map(function(f) {
+				return path.join(dir, f);
 			}),
 			concat = swintHelper.concat(files);
 
-		assert.equal(concat, numbers.join('\n') + '\n');
+		assert.equal(concat, 'Intro\nAnd one more line\nfile1\nfile4\nOutro\n');
 	});
 });
