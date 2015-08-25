@@ -18,6 +18,11 @@ describe('concat', function() {
 			}),
 			concat = swintHelper.concat(files);
 
-		assert.equal(concat, 'Intro\nAnd one more line\nfile1\nfile4\nOutro\n');
+		assert.equal(
+			concat,
+			fs.readFileSync(
+				path.join(__dirname, '../test_result/concat/simple.js')
+			)
+		);
 	});
 });
