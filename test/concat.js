@@ -4,6 +4,8 @@ var os = require('os'),
 	assert = require('assert'),
 	swintHelper = require('../lib');
 
+global.swintVar.printLevel = 5;
+
 describe('concat', function() {
 	var dir = path.join(__dirname, '../test_case');
 

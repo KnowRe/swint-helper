@@ -2,6 +2,8 @@ var assert = require("assert"),
 	swintHelper = require('../lib'),
 	defaultize = swintHelper.defaultize;
 
+global.swintVar.printLevel = 5;
+
 describe('defaultize', function() {
 	it('Filling the keys', function() {
 		var def = {

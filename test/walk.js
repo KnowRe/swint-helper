@@ -2,6 +2,8 @@ var path = require('path'),
 	assert = require('assert'),
 	swintHelper = require('../lib');
 
+global.swintVar.printLevel = 5;
+
 describe('walk', function() {
 	var dir = path.join(__dirname, '../test_case');
 

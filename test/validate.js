@@ -1,6 +1,8 @@
 var assert = require("assert"),
 	swintHelper = require('../lib');
 
+global.swintVar.printLevel = 5;
+
 describe('validate', function() {
 	it('Basic validation', function() {
 		var rule = {
