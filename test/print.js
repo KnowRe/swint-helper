@@ -16,7 +16,7 @@ describe('print', function() {
 			cred = JSON.parse(fs.readFileSync(credPath));
 		} catch(e) {
 			cred = {
-				key: process.env.SWINT_HELPER_KEY
+				logentries: process.env.SWINT_HELPER_KEY
 			};
 		}
 
