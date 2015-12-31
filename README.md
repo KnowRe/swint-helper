@@ -1,8 +1,6 @@
 # swint-helper
 Helper functions and classes for Swint
 
-**Warning: This is not the final draft yet, so do not use this until its official version is launched.**
-
 ## Installation
 ```sh
 $ npm install --save swint-helper
@@ -168,4 +166,21 @@ var str = concat([
 		path.join(__dirname, 'bbb.txt'),
 		path.join(__dirname, 'ccc.txt')
 	]);
+```
+---
+### `.createHash(options)`
+Creates key-secret SHA-256 hash pair based on the salt. This pair can be verified the `check-hash` middleware from `swint-middleware`.
+
+#### Options
+* `key`: `Number`, default: 15
+* `secret`: `Number`, default: 25
+* `salt`: `String`, default: `SwintIsForTwins`
+
+#### Example
+```javascript
+var hashPair = createHash({
+	salt: 'ItIsSalty'
+});
+
+// hashPair.key, hashPair.secret is generated
 ```
