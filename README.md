@@ -1,7 +1,7 @@
 # swint-helper
 Helper functions and classes for Swint
 
-**Warning: This is not the final draft yet, so do not use this until its official version is launched**
+**Warning: This is not the final draft yet, so do not use this until its official version is launched.**
 
 ## Installation
 ```sh
