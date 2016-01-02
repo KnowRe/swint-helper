@@ -1,6 +1,6 @@
 {
   "name": "swint-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helper functions and classes for Swint",
   "main": "lib/index.js",
   "scripts": {
@@ -25,8 +25,8 @@
   "bugs": {
     "url": "https://github.com/KnowRe/swint-helper/issues"
   },
-  "engines" : {
-    "node" : ">=4.0.0"
+  "engines": {
+    "node": ">=4.0.0"
   },
   "homepage": "https://github.com/KnowRe/swint-helper",
   "dependencies": {
