@@ -1,5 +1,8 @@
-2015.12.31, Version 1.0.0
- * First official release
+2016.02.02, Version 1.1.0
+ * Update: Added print.XXX constant support
 
 2016.01.02, Version 1.0.1
  * Version 1.0.0 already exists so version upgraded without change
+
+2015.12.31, Version 1.0.0
+ * First official release

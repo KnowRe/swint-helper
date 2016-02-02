@@ -102,26 +102,31 @@ var o = validate(r, t);
 Prints messages and associated levels
 
 #### Levels
-* 0 : RAW
-* 1 : DEBUG(default)
-* 2 : INFO
-* 3 : WARNING
-* 4 : ERROR
+* 0(`print.RAW`) : RAW
+* 1(`print.DEBUG`) : DEBUG(default)
+* 2(`print.INFO`) : INFO
+* 3(`print.WARN`) : WARNING
+* 4(`print.ERROR`) : ERROR
 
 #### Examples
 ```javascript
 print(0, 'Raw message');
+print(print.RAW, 'Raw message');
 // ==> Raw message
 print(1, 'Debug message');
+print(print.DEBUG, 'Debug message');
 // ==> DEBUG/2015-05-07T13:55:35.612Z)
 //		Debug message
 print(2, 'Info message');
+print(print.INFO, 'Info message');
 // ==> INFO /2015-05-07T13:55:35.612Z)
 //		Info message
 print(3, 'Warning message');
+print(print.WARN, 'Warning message');
 // ==> WARN /2015-05-07T13:55:35.612Z)
 //		Warning message
 print(4, 'Error message');
+print(print.ERROR, 'Error message');
 // ==> ERROR/2015-05-07T13:55:35.612Z)
 //		Error message
 
