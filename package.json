@@ -34,7 +34,7 @@
     "sprintf": "^0.1.5"
   },
   "devDependencies": {
-    "mocha": "^2.5.3",
-    "eslint": "^2.11.1"
+    "mocha": "^3.2.0",
+    "eslint": "^3.14.1"
   }
 }
