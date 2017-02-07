@@ -189,3 +189,18 @@ var hashPair = createHash({
 
 // hashPair.key, hashPair.secret is generated
 ```
+---
+### `.traverseWithQuery(struct, query)`
+Traverses through a structure by following a list of keys/indexs.
+
+#### Example
+```javascript
+	var s  = { a: [1, 2, { b: 'ccc' } ] },
+		s2 = { a: { b: 'ccc2' } };
+	
+	var o  = traverseWithQuery(s, ['a', 2, 'b']),
+		o2 = traverseWithQuery(s2, 'a.b');
+	
+	// o  ==> 'ccc'
+	// o2 ==> 'ccc2'
+```
