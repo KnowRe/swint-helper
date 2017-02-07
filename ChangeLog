@@ -1,3 +1,7 @@
+2017.02.07, Version 1.2.0
+ * Update: Add objectQuery feature
+ * Update: Changed method name (objectQuery -> traverseWithQuery)
+
 2017.01.31, Version 1.1.6
  * Upgrade: Upgraded missing dependencies
 
