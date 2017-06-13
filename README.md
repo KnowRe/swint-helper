@@ -1,4 +1,6 @@
 # swint-helper
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Knowre-Dev/swint-helper.svg)](https://greenkeeper.io/)
 Helper functions and classes for Swint
 
 ## Installation
