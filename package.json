@@ -1,6 +1,6 @@
 {
   "name": "swint-helper",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Helper functions and classes for Swint",
   "main": "lib/index.js",
   "scripts": {
