@@ -4,6 +4,12 @@ var assert = require("assert"),
 global.swintVar.printLevel = 5;
 
 describe('validate', function() {
+	it('Simple validation', function() {
+		assert.deepEqual(swintHelper.validate(0, 42), [ true, [] ]);
+		assert.deepEqual(swintHelper.validate('', '42'), [ true, [] ]);
+		assert.deepEqual(swintHelper.validate(new Date(0), new Date()), [ true, [] ]);
+	});
+
 	it('Basic validation', function() {
 		var rule = {
 				a: 0,
