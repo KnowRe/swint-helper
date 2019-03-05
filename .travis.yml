@@ -2,6 +2,7 @@ language: node_js
 node_js:
 - 10.15.2
 - 10.0.0
+install: npm install
 deploy:
   provider: npm
   email: dev@knowre.com
