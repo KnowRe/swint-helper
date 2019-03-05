@@ -1,3 +1,8 @@
+2019.03.05, Version 1.2.10
+ * Update : travis deploy secure-key
+ * Upgrade: Upgraded node version & dependencies
+ * Build: npm ci build bug (use npm install)
+
 2018.05.08, Version 1.2.9
  * Fix: change returning value when stack is empty
 

@@ -1,6 +1,6 @@
 {
   "name": "swint-helper",
-  "version": "1.2.9",
+  "version": "1.2.10",
   "description": "Helper functions and classes for Swint",
   "main": "lib/index.js",
   "scripts": {
@@ -30,11 +30,11 @@
   },
   "homepage": "https://github.com/KnowRe-Dev/swint-helper",
   "dependencies": {
-    "le_node": "1.7.1",
+    "le_node": "1.8.0",
     "sprintf": "0.1.5"
   },
   "devDependencies": {
-    "eslint": "4.12.1",
-    "mocha": "4.0.1"
+    "eslint": "5.15.1",
+    "mocha": "6.0.2"
   }
 }
